@@ -104,7 +104,7 @@ class DiskSmartCheck
         }
 
         foreach ($output as $disk) {
-            if (preg_match('/\/dev\/.{4}/', $disk, $matches)) {
+            if (preg_match('/\/dev\/\w{4}/', $disk, $matches)) {
                 $disks[] = $matches[0];
                 $this->debugLog('disk found: ' . $matches[0]);
                 continue;
